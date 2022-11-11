@@ -16,6 +16,7 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "ES6",
+    "types": ["vitest/globals"],
     "useDefineForClassFields": true
   },
   "include": ["src"],
