@@ -7,7 +7,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', 'monk'],
   rules: {
     '@typescript-eslint/no-unused-vars': 'warn',
     'react-hooks/exhaustive-deps': 'warn',
@@ -26,7 +26,8 @@ module.exports = {
     'react/no-direct-mutation-state': 'error',
     'react/no-multi-comp': 'error',
     'react/no-unused-state': 'warn',
-    semi: ['error', 'always']
-  },
-  overrides: []
+    semi: ['error', 'always'],
+    'monk/imports': 'error',
+    'monk/exports': 'error'
+  }
 };
