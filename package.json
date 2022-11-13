@@ -10,9 +10,10 @@
     "preview": "vite preview",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "format": "npx prettier --ignore-path .gitignore --write \"**/*.+(js|jsx|json|ts|tsx|html|css)\"",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "format": "npx prettier --ignore-path .gitignore --check \"**/*.+(js|jsx|json|ts|tsx|html|css)\"",
+    "format:fix": "npx prettier --ignore-path .gitignore --write \"**/*.+(js|jsx|json|ts|tsx|html|css)\"",
+    "lint": "eslint --ignore-path .gitignore .",
+    "lint:fix": "eslint --ignore-path .gitignore . --fix",
     "prepare": "husky install",
     "validate": "npm run lint && npm run format && vitest --no-watch"
   },
