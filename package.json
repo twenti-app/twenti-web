@@ -28,23 +28,23 @@
   "devDependencies": {
     "@testing-library/react": "^13.4.0",
     "@types/react": "^18.0.22",
-    "@types/react-dom": "^18.0.7",
+    "@types/react-dom": "^18.0.9",
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.26",
-    "@typescript-eslint/eslint-plugin": "^5.42.1",
-    "@typescript-eslint/parser": "^5.42.1",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
     "@vitejs/plugin-react": "^2.2.0",
-    "@vitest/coverage-c8": "^0.25.1",
-    "eslint": "^8.27.0",
-    "eslint-plugin-monk": "^0.0.1",
-    "eslint-plugin-react": "^7.31.10",
+    "@vitest/coverage-c8": "^0.25.2",
+    "eslint": "^8.28.0",
+    "eslint-plugin-monk": "^0.0.2",
+    "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
     "happy-dom": "^7.7.0",
     "husky": "^8.0.2",
     "prettier": "^2.7.1",
-    "typescript": "^4.6.4",
-    "vite": "^3.2.0",
+    "typescript": "^4.9.3",
+    "vite": "^3.2.4",
     "vite-tsconfig-paths": "^3.5.2",
-    "vitest": "^0.25.1"
+    "vitest": "^0.25.2"
   }
 }
