@@ -1,6 +1,6 @@
-import { Link } from 'ui/components/Link';
-
 import { Styles } from './Footer.styles';
+
+import { Link } from 'ui/components/Link';
 
 export const Footer = () => {
   return (

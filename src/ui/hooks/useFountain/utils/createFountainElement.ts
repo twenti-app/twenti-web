@@ -1,6 +1,6 @@
-import { getContainer } from './getContainer';
-
 import type { FountainType, Particle } from 'ui/hooks/useFountain';
+
+import { getContainer } from './getContainer';
 
 let instanceCounter = 0;
 
@@ -130,7 +130,7 @@ export function createFountainElement(element: HTMLElement, imageUrl: string | s
     element.removeEventListener(tapEnd, disableAutoAddParticle);
     element.removeEventListener('mouseleave', disableAutoAddParticle);
 
-    let interval = setInterval(() => {
+    const interval = setInterval(() => {
       if (animationFrame && particles.length === 0) {
         cancelAnimationFrame(animationFrame);
         clearInterval(interval);
