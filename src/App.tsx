@@ -1,8 +1,6 @@
 import { Fragment } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { ThemeProvider } from 'styled-components';
-
 import { GlobalStyles } from 'Global.styles';
 
 import { routes } from 'configuration/routes';
