@@ -10,12 +10,10 @@ import { useNavigation } from 'ui/hooks/useNavigation';
 export const Header = () => {
   const { push } = useNavigation();
 
-  const redirect = () => push(routes.SIGN_IN);
-
   return (
     <Styles.Header>
-      <Logo />
-      <Button onClick={redirect}>Inicia sesión</Button>
+      <Logo className="logo" onClick={() => push(routes.LANDING)} />
+      <Button onClick={() => push(routes.SIGN_IN)}>Inicia sesión</Button>
     </Styles.Header>
   );
 };

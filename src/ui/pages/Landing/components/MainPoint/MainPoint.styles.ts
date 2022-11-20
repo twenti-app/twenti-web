@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Point = styled('li')`
+const Point = styled('div')`
   display: flex;
   flex-direction: column;
 
@@ -12,12 +12,11 @@ const Point = styled('li')`
 `;
 
 const Icon = styled('img')`
-  height: 50px;
   object-fit: none;
-  width: 50px !important;
+  min-width: 50px;
 `;
 
-const Wrapper = styled('div')`
+const Wrapper = styled('li')`
   display: flex;
   align-items: center;
   gap: 1rem;

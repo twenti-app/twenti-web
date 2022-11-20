@@ -10,7 +10,7 @@ const Title = styled('h1')`
   color: #3c4963;
   font-size: 11px;
   font-weight: bold;
-  padding: 4px 10px 3px;
+  padding: 0.25rem 0.5rem;
   width: 100%;
   -moz-border-radius-topleft: 2px;
   -moz-border-radius-topright: 2px;

@@ -6,7 +6,7 @@ const Note = styled('div')`
   font-size: 12px;
   line-height: 12px;
   margin-bottom: 1rem;
-  padding: 3px 8px;
+  padding: 0.25rem 0.5rem;
   text-align: center;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;

@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
 const Footer = styled('footer')`
-  bottom: 0;
+  align-items: center;
+  border-top: 1px solid #6590b7;
+  color: white;
   display: flex;
   gap: 0.25rem;
   justify-content: space-around;
-  align-items: center;
+  margin-top: auto;
   padding: 1rem;
-  position: absolute;
-  width: 100%;
-  color: white;
+  width: auto;
 `;
 
 const Links = styled('div')`

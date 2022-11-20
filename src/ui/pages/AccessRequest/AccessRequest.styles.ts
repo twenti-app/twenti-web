@@ -1,13 +1,19 @@
 import styled from 'styled-components';
 
-const Container = styled('div')`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+import { Section } from 'ui/styles/elements/Section';
+
+const View = styled(Section)`
   height: 300px;
-  justify-content: center;
   width: 300px;
-  margin: auto;
+
+  .logo {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+      margin-bottom: 1rem;
+    }
+  }
 `;
 
-export const Styles = { Container };
+export const Styles = { View };

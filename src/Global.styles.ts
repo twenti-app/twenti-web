@@ -6,6 +6,10 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+
+  html {
+    height: 100%;
+  }
     
   :root {
     --bg-color: #64a3cf;
@@ -20,6 +24,14 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+
+  }
+  
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
   }
 
   code {
@@ -27,8 +39,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   p {
+    color: #B6CDDD;
     font-size: 14px;
     line-height: 1.4em;
-    color: #B6CDDD;
   }
 `;

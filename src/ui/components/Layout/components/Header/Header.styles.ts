@@ -7,6 +7,14 @@ const Header = styled('header')`
   justify-content: space-between;
   padding: 1rem;
   width: 100%;
+
+  @media screen and (min-width: 768px) {
+    justify-content: end;
+
+    .logo {
+      display: none;
+    }
+  }
 `;
 
 export const Styles = { Header };
