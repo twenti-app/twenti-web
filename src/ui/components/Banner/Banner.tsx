@@ -1,5 +1,5 @@
 import { Styles } from './Banner.styles';
 
-export const Banner = () => {
-  return <Styles.Note className="banner">Por favor, introduce tu e-mail y contraseña de Tuenti para entrar.</Styles.Note>;
-};
+import type { BannerProps } from './@types/Banner.types';
+
+export const Banner = ({ text, type = 'info' }: BannerProps) => <Styles.Note className={type}>{text}</Styles.Note>;

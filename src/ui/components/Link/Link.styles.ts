@@ -1,8 +1,9 @@
+import { Link as RouteLink } from 'react-router-dom';
+
 import styled from 'styled-components';
 
-const Link = styled('a')`
+const Link = styled(RouteLink)`
   color: #fff;
-  display: block;
   font-weight: normal;
   padding: 6px 6px;
   position: relative;

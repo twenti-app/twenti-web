@@ -31,7 +31,7 @@ export const Modal = ({ children, isVisible, onClose }: ModalProps) => {
     <Styles.Container animationStatus={animationStatus} onAnimationEnd={onAnimationEnd} ref={modalRef} tabIndex={-1}>
       <Styles.Mask onClick={onClose} />
       <Styles.Dialog animationStatus={animationStatus} aria-modal={true} role="dialog">
-        <Styles.CloseButton onClick={onClose}>X</Styles.CloseButton>
+        <Styles.CloseButton onClick={onClose}>x</Styles.CloseButton>
         {children}
       </Styles.Dialog>
     </Styles.Container>

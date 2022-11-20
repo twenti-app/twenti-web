@@ -78,22 +78,6 @@ const CloseButton = styled('button')`
   }
 `;
 
-const Header = styled('header')`
-  -webkit-box-pack: justify !important;
-  -webkit-box-align: center !important;
-  display: flex !important;
-  flex: 0 0 auto !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  padding: 0px !important;
-  min-height: 48px !important;
-  border-bottom: 0px !important;
-  color: rgb(34, 34, 34) !important;
-  font-size: 16px !important;
-  line-height: 20px !important;
-  font-weight: 800 !important;
-`;
-
 const sizes = css`
   height: 100%;
   left: 0;
@@ -111,4 +95,4 @@ const Mask = styled('div')`
   transition: backdrop-filter 0.3s ease-in-out;
 `;
 
-export const Styles = { CloseButton, Container, Dialog, Header, Mask };
+export const Styles = { CloseButton, Container, Dialog, Mask };

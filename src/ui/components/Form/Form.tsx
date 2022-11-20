@@ -1,17 +1,14 @@
-import { FormEvent, Fragment, HTMLProps, ReactNode, Suspense } from 'react';
+import { Fragment, Suspense } from 'react';
 import { Await } from 'react-router-dom';
 
 import { Styles } from './Form.styles';
 
-import { Button } from '../Button';
+import { Button } from 'ui/components/Button';
 
-interface FormProps extends HTMLProps<HTMLFormElement> {
-  footer?: ReactNode;
-  title?: string;
-  onClickSubmit?: (values: { [k: string]: FormDataEntryValue }) => Promise<void>;
-}
+import type { FormEvent } from 'react';
+import type { FormProps } from './@types/Form.types';
 
-export const Form = ({ children, footer, title, onClickSubmit, ...rest }: FormProps) => {
+export const Form = ({ children, title, onClickSubmit, ...rest }: FormProps) => {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -26,15 +23,14 @@ export const Form = ({ children, footer, title, onClickSubmit, ...rest }: FormPr
       <Styles.Title>{title}</Styles.Title>
       <Styles.Form onSubmit={handleSubmit}>
         {children}
-        <Suspense fallback={<Button status="pending">Submit</Button>}>
-          <Await errorElement={<Button status="error">Submit</Button>} resolve={handleSubmit}>
-            <Button type="submit">Submit</Button>
-          </Await>
-        </Suspense>
+        <Styles.Footer>
+          <Suspense fallback={<Button status="pending">Submit</Button>}>
+            <Await errorElement={<Button status="error">Submit</Button>} resolve={handleSubmit}>
+              <Button type="submit">Submit</Button>
+            </Await>
+          </Suspense>
+        </Styles.Footer>
       </Styles.Form>
-      <footer>
-        <p>{footer}</p>
-      </footer>
     </Fragment>
   );
 };

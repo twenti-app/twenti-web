@@ -6,8 +6,8 @@ export const Footer = () => {
   return (
     <Styles.Footer>
       <Styles.Links>
-        <Link>Blog</Link>
-        <Link>Idioma</Link>
+        <Link to="#">Blog</Link>
+        <Link to="#">Idioma</Link>
       </Styles.Links>
       <small translate="no">
         &copy; Copyright <s>2010</s> {new Date().getFullYear()}, Twenti

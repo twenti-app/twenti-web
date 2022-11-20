@@ -2,18 +2,17 @@ import { useId } from 'react';
 
 import { Styles } from './LabelledInput.styles';
 
-export interface LabelledInputProps {
-  label?: string;
-  value?: string;
-}
+import { Input } from 'ui/components/Input';
 
-export const LabelledInput = ({ label, value }: LabelledInputProps) => {
+import type { LabelledInputProps } from './@types/LabelledInput.types';
+
+export const LabelledInput = ({ label, ...rest }: LabelledInputProps) => {
   const id = useId();
 
   return (
     <Styles.Wrapper>
       <Styles.Label htmlFor={id}>{label}</Styles.Label>
-      <input id={id} value={value} />
+      <Input id={id} {...rest} />
     </Styles.Wrapper>
   );
 };

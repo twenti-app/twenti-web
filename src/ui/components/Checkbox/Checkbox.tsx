@@ -1,10 +1,16 @@
-import type { ChangeEvent } from 'react';
+import { useId } from 'react';
 
-interface CheckboxProps {
-  checked: boolean;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-}
+import { Styles } from './Checkbox.styles';
 
-export const Checkbox = ({ checked, onChange }: CheckboxProps) => {
-  return <input checked={checked} onChange={onChange} type="checkbox" />;
+import type { CheckboxProps } from './@types/Checkbox.types';
+
+export const Checkbox = ({ label, ...rest }: CheckboxProps) => {
+  const id = useId();
+
+  return (
+    <Styles.Container>
+      <Styles.Checkbox id={id} type="checkbox" {...rest} />
+      <label htmlFor={id}>{label}</label>
+    </Styles.Container>
+  );
 };

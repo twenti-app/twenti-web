@@ -1,7 +1,7 @@
-import type { InputHTMLAttributes } from 'react';
+import { Styles } from './Input.styles';
 
-export type InputProps = InputHTMLAttributes<HTMLInputElement>;
+import type { InputProps } from './@types/Input.types';
 
-export const Input = ({ ...rest }: InputProps) => {
-  return <input {...rest} />;
+export const Input = ({ status, readOnly, className, ...rest }: InputProps) => {
+  return <Styles.Input className={`${className} ${status}`} readOnly={readOnly || status === 'pending'} {...rest} />;
 };

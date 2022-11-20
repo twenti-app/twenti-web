@@ -19,16 +19,17 @@ const Title = styled('h1')`
 `;
 
 const Form = styled('form')`
-  width: 100%;
   background-color: white;
-  border: 1px solid #accfe5;
   border-radius: 2px;
+  border: 1px solid #accfe5;
   padding: 1rem;
+  width: 100%;
 `;
 
 const Footer = styled('footer')`
   display: flex;
-  padding: 0.5rem;
+  justify-content: center;
+  margin-top: 0.5rem;
 `;
 
 export const Styles = { Footer, Form, Title };

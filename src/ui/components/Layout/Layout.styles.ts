@@ -4,6 +4,7 @@ const Main = styled('main')`
   align-items: center;
   display: flex;
   flex-direction: column;
+  flex: 1;
   gap: 1rem;
   height: 100%;
   justify-content: center;

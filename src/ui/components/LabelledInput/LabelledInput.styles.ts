@@ -1,28 +1,21 @@
 import styled from 'styled-components';
 
 const Wrapper = styled('div')`
-  /* display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem; */
-
-  clear: both;
-  margin: 0 0 8px 0;
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  margin: 0 0 0.5rem 0;
   overflow: hidden;
+  padding: 0 1rem;
 `;
 
 const Label = styled('label')`
-  /* font-size: 0.75rem;
-  font-weight: 600;
-  margin-bottom: 0.25rem; */
-
   color: #7e7e7e;
   display: block;
-  float: left;
   font-size: 11px;
-  margin: 0 8px 0 0;
-  padding: 5px 0;
+  font-weight: bold;
+  min-width: 70px;
   text-align: right;
-  width: 70px;
 `;
 
 export const Styles = { Label, Wrapper };

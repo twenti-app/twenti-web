@@ -1,9 +1,5 @@
 import { Styles } from './Link.styles';
 
-import type { AnchorHTMLAttributes } from 'react';
+import type { LinkProps } from 'react-router-dom';
 
-type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement>;
-
-export const Link = ({ children, ...rest }: LinkProps) => {
-  return <Styles.Link {...rest}>{children}</Styles.Link>;
-};
+export const Link = ({ children, ...rest }: LinkProps) => <Styles.Link {...rest}>{children}</Styles.Link>;
