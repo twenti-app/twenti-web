@@ -1,29 +1,30 @@
+import { Fragment } from 'react';
+
 import { Styles } from './SignIn.styles';
 
+import { routes } from 'configuration/routes';
+
 import { Banner } from 'ui/components/Banner';
-import { Checkbox } from 'ui/components/Checkbox/Checkbox';
+import { Form } from 'ui/components/Form';
 import { LabelledInput } from 'ui/components/LabelledInput';
 import { Link } from 'ui/components/Link';
-import { LoadingButton } from 'ui/components/LoadingButton/LoadingButton';
+import { Logo } from 'ui/components/Logo';
 
 export const SignIn = () => {
+  const renderFooter = () => (
+    <Fragment>
+      Don't have an account? <Link to={routes.ACCESS_REQUEST}>Sign up</Link>
+    </Fragment>
+  );
+
   return (
     <Styles.Container>
-      <Styles.FormTitle>Entrar</Styles.FormTitle>
-      <Styles.Login>
-        <Styles.Form>
-          <Banner />
-          <LabelledInput label="E-mail" />
-          <LabelledInput label="Contraseña" />
-          <div>
-            <Checkbox checked={false} onChange={() => null} />
-            Recordarme en este equipo
-          </div>
-          <LoadingButton />
-        </Styles.Form>
-      </Styles.Login>
-      <Link>Recordar contraseña</Link>
-      <Link>¿Quieres entrar?</Link>
+      <Logo />
+      <Form footer={renderFooter()} title="Entrar">
+        <Banner />
+        <LabelledInput label="E-mail" name="email" type="email" />
+        <LabelledInput label="Contraseña" name="password" type="password" />
+      </Form>
     </Styles.Container>
   );
 };

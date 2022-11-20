@@ -1,4 +1,4 @@
-import { Fragment, lazy, Suspense } from 'react';
+import { Fragment } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { ThemeProvider } from 'styled-components';
@@ -9,9 +9,10 @@ import { routes } from 'configuration/routes';
 
 import { Layout } from 'ui/components/Layout';
 
+import AccessRequest from 'ui/pages/AccessRequest';
+import Landing from 'ui/pages/Landing';
 import NotFound from 'ui/pages/NotFound';
 import SignIn from 'ui/pages/SignIn';
-import SignUp from 'ui/pages/SignUp';
 
 export function App() {
   return (
@@ -21,9 +22,9 @@ export function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
+            <Route element={<Landing />} index={true} path={routes.LANDING} />
+            <Route element={<AccessRequest />} path={routes.ACCESS_REQUEST} />
             <Route element={<SignIn />} path={routes.SIGN_IN} />
-            <Route element={<SignUp />} path={routes.ACCESS_REQUEST} />
-            <Route element={<SignUp />} path={routes.SIGN_UP} />
           </Route>
           <Route element={<NotFound />} path={routes.NOT_FOUND} />
         </Routes>
