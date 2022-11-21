@@ -10,6 +10,11 @@
     "title": "¿Qué es Twenti?"
   },
   "ACCESS_REQUEST": {
-    "banner": "Por favor, introduce tu e-mail y contraseña de Tuenti para entrar."
+    "banner": "Por favor, introduce tu e-mail y contraseña de Tuenti para entrar.",
+    "formTitle": "Necesito invitaciones"
+  },
+  "SIGN_IN": {
+    "banner": "Por favor, introduce tu e-mail y contraseña de Tuenti para entrar.",
+    "formTitle": "Necesito invitaciones"
   }
 }
