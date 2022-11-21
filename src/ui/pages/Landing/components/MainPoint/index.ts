@@ -1,1 +1,0 @@
-export { MainPoint } from './MainPoint';

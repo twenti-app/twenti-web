@@ -42,7 +42,7 @@ const Description = styled('div')`
   }
 `;
 
-const MainPoints = styled('ul')`
+const List = styled('ul')`
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -65,4 +65,4 @@ const ActionButtons = styled('div')`
   margin: 1rem 0;
 `;
 
-export const Styles = { ActionButtons, Description, MainPoints, View, Container };
+export const Styles = { ActionButtons, Description, List, View, Container };
