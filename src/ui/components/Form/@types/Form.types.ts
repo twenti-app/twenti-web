@@ -1,4 +1,4 @@
-import type { FormEvent, HTMLProps } from 'react';
+import type { HTMLProps } from 'react';
 
 export interface FormProps extends HTMLProps<HTMLFormElement> {
   title?: string;

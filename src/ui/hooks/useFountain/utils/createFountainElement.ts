@@ -1,6 +1,6 @@
-import type { FountainType, Particle } from 'ui/hooks/useFountain';
-
 import { getContainer } from './getContainer';
+
+import type { FountainType, Particle } from 'ui/hooks/useFountain';
 
 let instanceCounter = 0;
 

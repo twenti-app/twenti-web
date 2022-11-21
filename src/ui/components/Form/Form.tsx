@@ -8,7 +8,7 @@ import { Button } from 'ui/components/Button';
 import type { FormEvent } from 'react';
 import type { FormProps } from './@types/Form.types';
 
-export const Form = ({ children, title, onClickSubmit, ...rest }: FormProps) => {
+export const Form = ({ children, title, onClickSubmit }: FormProps) => {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
