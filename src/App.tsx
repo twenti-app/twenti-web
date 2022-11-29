@@ -1,33 +1,32 @@
-import { useState } from 'react';
+import { Fragment } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import './App.css';
+import { GlobalStyles } from 'Global.styles';
 
-import reactLogo from './assets/react.svg';
+import { routes } from 'configuration/routes';
 
-function App() {
-  const [count, setCount] = useState(0);
+import { Layout } from 'ui/components/Layout';
 
+import AccessRequest from 'ui/pages/AccessRequest';
+import Landing from 'ui/pages/Landing';
+import NotFound from 'ui/pages/NotFound';
+import SignIn from 'ui/pages/SignIn';
+
+export function App() {
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" rel="noreferrer" target="_blank">
-          <img alt="Vite logo" className="logo" src="/vite.svg" />
-        </a>
-        <a href="https://reactjs.org" rel="noreferrer" target="_blank">
-          <img alt="React logo" className="logo react" src={reactLogo} />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount(count => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-      <p>Some sample text for vitest</p>
-    </div>
+    <Fragment>
+      <GlobalStyles />
+
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route element={<Landing />} index={true} path={routes.LANDING} />
+            <Route element={<AccessRequest />} path={routes.ACCESS_REQUEST} />
+            <Route element={<SignIn />} path={routes.SIGN_IN} />
+          </Route>
+          <Route element={<NotFound />} path={routes.NOT_FOUND} />
+        </Routes>
+      </BrowserRouter>
+    </Fragment>
   );
 }
-
-export default App;

@@ -1,0 +1,7 @@
+{
+  "ACCESS_REQUEST": "/accessRequest",
+  "LANDING": "/",
+  "NOT_FOUND": "*",
+  "SIGN_IN": "/signIn",
+  "SIGN_UP": "/signUp"
+}

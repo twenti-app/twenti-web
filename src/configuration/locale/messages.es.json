@@ -1,0 +1,20 @@
+{
+  "LANDING": {
+    "local": "Local",
+    "localParagraph": "Descubre servicios locales y participa con las marcas que realmente te importan.",
+    "mobile": "Móvil",
+    "mobileParagraph": "Accede a Tuenti desde tu móvil en tiempo real estés donde estés.",
+    "paragraph": "Tuenti es una plataforma social privada, a la que se accede únicamente por invitación. Cada día la usan millones de personas para comunicarse entre ellas y compartir información.",
+    "social": "Social",
+    "socialParagraph": "Conéctate, comparte y comunícate con tus amigos, compañeros de trabajo y familia.",
+    "title": "¿Qué es Twenti?"
+  },
+  "ACCESS_REQUEST": {
+    "banner": "Por favor, introduce tu e-mail y contraseña de Tuenti para entrar.",
+    "formTitle": "Necesito invitaciones"
+  },
+  "SIGN_IN": {
+    "banner": "Por favor, introduce tu e-mail y contraseña de Tuenti para entrar.",
+    "formTitle": "Necesito invitaciones"
+  }
+}
