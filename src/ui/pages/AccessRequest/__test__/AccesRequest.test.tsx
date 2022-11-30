@@ -25,4 +25,18 @@ describe('Access Request page', () => {
 
     expect(logo).toBeDefined();
   });
+
+  it('should be email input', () => {
+    render(
+      <Router>
+        <AccessRequest />
+      </Router>
+    );
+
+    const emailInput = screen.getByRole('textbox', {
+      name: /e-mail/i
+    });
+
+    expect(emailInput).toBeDefined();
+  });
 });
