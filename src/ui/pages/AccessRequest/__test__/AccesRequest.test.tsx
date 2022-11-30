@@ -1,7 +1,8 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import { describe, it } from 'vitest';
+import { faker } from '@faker-js/faker';
 
 import { AccessRequest } from '../AccessRequest';
 
@@ -38,5 +39,22 @@ describe('Access Request page', () => {
     });
 
     expect(emailInput).toBeDefined();
+  });
+
+  it('should collect email text', () => {
+    render(
+      <Router>
+        <AccessRequest />
+      </Router>
+    );
+    const emailFake = faker.internet.email();
+
+    const emailInput: HTMLInputElement = screen.getByRole('textbox', {
+      name: /e-mail/i
+    });
+
+    fireEvent.change(emailInput, { target: { value: emailFake } });
+
+    expect(emailInput.value).toBe(emailFake);
   });
 });
