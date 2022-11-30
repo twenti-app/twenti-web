@@ -14,12 +14,15 @@ describe('Access Request page', () => {
     );
   });
 
-  // it('should have logo', () => {
-  //   render(<AccessRequest />);
+  it('should have twenty logo', () => {
+    render(
+      <Router>
+        <AccessRequest />
+      </Router>
+    );
 
-  //   screen.debug();
-  //   const logo = screen.getByRole('img');
+    const logo = screen.getByAltText('twenty logo');
 
-  //   expect(logo).toBeDefined();
-  // });
+    expect(logo).toBeDefined();
+  });
 });
