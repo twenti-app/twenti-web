@@ -47,14 +47,14 @@ describe('Access Request page', () => {
         <AccessRequest />
       </Router>
     );
-    const emailFake = faker.internet.email();
+    const email = faker.internet.email();
 
     const emailInput: HTMLInputElement = screen.getByRole('textbox', {
       name: /e-mail/i
     });
 
-    fireEvent.change(emailInput, { target: { value: emailFake } });
+    fireEvent.change(emailInput, { target: { value: email } });
 
-    expect(emailInput.value).toBe(emailFake);
+    expect(emailInput.value).toBe(email);
   });
 });
